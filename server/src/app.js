@@ -13,10 +13,8 @@ mainframe.init()
 
 wss.on('connection', (ws) => {
   const states = mainframe.getStates()
-  console.log(states)
 
   states.forEach((state) => {
-    console.log(state)
     ws.send(JSON.stringify(state))
   })
 })
