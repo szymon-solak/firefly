@@ -9,7 +9,7 @@ const format = (lyrics) => {
     .map((line, i) => <p key={i}>{line}</p>)
 }
 
-const defaultImage = '/default.jpg'
+const defaultImage = 'public/default_album.png'
 
 export default ({ position, data: { image, song, artist, lyrics } = {} }) => (
   <Panel position={position}>

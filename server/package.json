@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production node index.js | ./node_modules/.bin/bunyan -j",
-    "dev": "NODE_ENV=development node index.js | ./node_modules/.bin/bunyan -j",
+    "start": "node index.js | ./node_modules/.bin/bunyan -j",
+    "dev": "node index.js | ./node_modules/.bin/bunyan -j",
     "debug": "node --inspect index.js",
     "test": "jest",
     "lint": "eslint src/"
