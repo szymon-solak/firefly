@@ -1,0 +1,36 @@
+{
+  "name": "firefly",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js | ./node_modules/.bin/bunyan -j",
+    "debug": "node --inspect index.js",
+    "test": "jest",
+    "lint": "eslint src/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015-node": "^6.1.1",
+    "babel-preset-stage-0": "^6.22.0",
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.6.0",
+    "jest": "^20.0.4"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bunyan": "^1.8.10",
+    "express": "^4.14.1",
+    "lyric-get": "^1.0.3",
+    "ws": "^3.0.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015-node",
+      "stage-0"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+@import variables
+@import keyframes
+@import clear
+
+::-webkit-scrollbar
+  width: 4px
+
+::-webkit-scrollbar-track
+  box-shadow: inset 0 0 3px #433545
+  border-radius: 4px
+
+::-webkit-scrollbar-thumb
+  box-shadow: inset 0 0 3px #844c8a
+  border-radius: 4px
+
+#root
+  width: 100%
+  height: 100vh
+  background: $background-gradient
+  background-size: 800% 800%
+  animation: backgroundFlow 50s ease infinite
+
+@import layout/dashboard
+
+@import components/panel
+@import components/music
+@import components/weather
+@import components/xkcd
+@import components/news

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Questrial|Roboto");
+@keyframes backgroundFlow {
+  0% {
+    background-position: 0% 80%;
+  }
+  50% {
+    background-position: 100% 25%;
+  }
+  100% {
+    background-position: 0% 80%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Questrial", sans-serif;
+}
+
+h1 {
+  line-height: 1.3;
+  letter-spacing: .1em;
+  font-size: 1.8em;
+}
+
+p {
+  font-size: 1.4em;
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px #433545;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 3px #844c8a;
+  border-radius: 4px;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(318deg, #844c8a, #433545, #1c1d49);
+  background-size: 800% 800%;
+  animation: backgroundFlow 50s ease infinite;
+}
+
+.dashboard {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  padding: 2em;
+  grid-gap: 2em;
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+  padding: .4em;
+  background: rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music__currentSong {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.music__currentSong img {
+  width: 64px;
+  height: 64px;
+  margin-right: 12px;
+}
+
+.music__lyrics {
+  padding: 8px 0;
+  width: 90%;
+}
+
+.music__lyrics p {
+  font-size: 1.2em;
+}
