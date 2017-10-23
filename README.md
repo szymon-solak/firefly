@@ -1,3 +1,3 @@
 # firefly
 
-A dashboard app build as a holiday side project
+A dashboard app built as a holiday side project
