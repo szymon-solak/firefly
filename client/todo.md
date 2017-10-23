@@ -1,4 +1,2 @@
-- Finish styling up components
 - Add prop types to components
 - Fix character encoding in lyrics
-- Limit news descriptions characters (prolly server side)
