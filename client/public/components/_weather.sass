@@ -3,15 +3,29 @@
   height: 100%
   display: flex
   flex-direction: column
-  justify-content: space-around
+  // justify-content: space-around
   align-content: center
   text-align: center
 
-  &__info
+  &__type
+    flex: 1
+    display: flex
+    justify-content: center
+    align-items: center
+
     i
       font-size: 3em
 
+  &__info
+    flex: 1
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+    background: $accent
+
   &__data
+    width: 100%
     display: flex
     justify-content: space-around
     align-content: center

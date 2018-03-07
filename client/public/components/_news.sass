@@ -2,6 +2,9 @@
   width: 90%
   margin: 0 auto
   padding: .4em
+  display: flex
+  flex-direction: column
+  justify-content: center
 
   a, a:visited
     color: $link
@@ -11,6 +14,8 @@
     &:hover
       color: $link-visited
 
+  .article
+    padding: 1em 0
+
   .article + .article
     border-top: 1px solid $panel-separator
-    padding-top: 1em

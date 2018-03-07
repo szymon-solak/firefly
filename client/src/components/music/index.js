@@ -18,7 +18,7 @@ export default ({ position, data: { image, song, artist, lyrics } = {} }) => (
         <img src={image || defaultImage} />
         <div className="music__songData">
           <h1>{song || 'Nothing is currently playing'}</h1>
-          <p>{artist}</p>
+          <p className="music__artist">{artist}</p>
         </div>
       </div>
       <div className="music__lyrics">{format(lyrics)}</div>
