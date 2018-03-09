@@ -1,5 +1,5 @@
 import express from 'express'
-import Websocket from 'ws'
+import Websocket from 'uws'
 
 import { mainframe } from './mainframe'
 

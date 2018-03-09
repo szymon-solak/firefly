@@ -21,12 +21,12 @@
     "jest": "^20.0.4"
   },
   "dependencies": {
-    "babel-core": "^6.22.1",
     "axios": "^0.16.2",
+    "babel-core": "^6.22.1",
     "bunyan": "^1.8.10",
     "express": "^4.14.1",
     "lyric-get": "^1.0.3",
-    "ws": "^3.0.0"
+    "uws": "^9.14.0"
   },
   "babel": {
     "presets": [

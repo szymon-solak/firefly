@@ -1,7 +1,9 @@
 import { createIntervalService } from '../../service'
 
 function sendHeartbeat() {
-  this.send('heartbeat')
+  this.setState({
+    time: Date.now()
+  })
 }
 
 export const heartbeat = createIntervalService({
