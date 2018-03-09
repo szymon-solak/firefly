@@ -10,6 +10,7 @@ import Music from './components/music'
 import News from './components/news'
 import Weather from './components/weather'
 import Xkcd from './components/xkcd'
+import StatusBar from './components/statusBar'
 
 const App = () => (
   <Dashboard rows="5" columns="3">
@@ -27,6 +28,10 @@ const App = () => (
 
     <Subscribe type="XKCD">
       <Xkcd position="c1:c5" />
+    </Subscribe>
+
+    <Subscribe type="HEARTBEAT">
+      <StatusBar />
     </Subscribe>
   </Dashboard>
 )

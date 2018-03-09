@@ -1,2 +1,3 @@
 - Add prop types to components
 - Fix character encoding in lyrics
+- If ws connection fails try to reconnect (+ Add it to status bar)
