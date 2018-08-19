@@ -1,4 +1,6 @@
 import lyrics from 'lyric-get'
+import Vibrant from 'node-vibrant'
+
 import { createFetchService } from '../../service'
 import { music as api } from '../../config'
 
@@ -11,12 +13,13 @@ function getLyrics(artist, song) {
   })
 }
 
-function handleMusicData(response) {
+async function handleMusicData(response) {
   if (!response.recenttracks) {
     this.setState({
       artist: '',
       song: 'Nothing is currenly playing',
       image: '',
+      colors: [0, 0, 0],
       lyrics: '',
     })
     return
@@ -25,24 +28,35 @@ function handleMusicData(response) {
   const track = response.recenttracks.track[0]
   const artist = track.artist['#text']
   const song = track.name
+  const image = track.image[track.image.length - 1]['#text']
 
   const musicData = {
     artist,
     song,
-    image: track.image[track.image.length - 1]['#text'],
+    image,
   }
 
-  getLyrics(artist, song)
-    .then(res =>
-      Object.assign({}, musicData, { lyrics: res })
-    )
-    .then((newState) => {
-      this.setState(newState)
-    })
-    .catch(() => {
-      // Lyrics not found
-      this.setState(Object.assign({}, musicData))
-    })
+  if (image) {
+    const colors = await Vibrant
+      .from(image)
+      .getPalette()
+
+    // eslint-disable-next-line
+    const vibrantColors = colors.Vibrant._rgb
+
+    const normalizedColors = vibrantColors.map(Math.round)
+
+    musicData.colors = normalizedColors
+  }
+
+  try {
+    const songLyrics = await getLyrics(artist, song)
+    musicData.lyrics = songLyrics
+  } catch (err) {
+    // Lyrics not found, pass
+  }
+
+  this.setState(Object.assign({}, musicData))
 }
 
 export const music = createFetchService({
