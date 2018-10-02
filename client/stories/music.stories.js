@@ -1,8 +1,6 @@
 import React from 'react'
-
 import { storiesOf } from '@storybook/react'
 
-import '../public/style.sass'
 import Music from '../src/components/music'
 
 storiesOf('Music', module)
