@@ -6,11 +6,12 @@ import {
   music,
   quote,
   xkcd,
-  news
+  news,
+  colors
 } from '../services/'
 
 export const mainframe = {
-  services: [heartbeat, weather, music, quote, xkcd, news],
+  services: [heartbeat, weather, music, quote, xkcd, news, colors],
   init() {
     log.info('Creating mainframe instance')
     log.info('Active services: ', this.services.map(x => x.name))

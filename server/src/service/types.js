@@ -5,4 +5,5 @@ export default new Map([
   ['quote', 'QUOTE'],
   ['xkcd', 'XKCD'],
   ['news', 'NEWS'],
+  ['colors', 'COLORS'],
 ])
