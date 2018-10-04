@@ -2,7 +2,7 @@ import { createIntervalService } from '../../service'
 
 function sendHeartbeat() {
   this.setState({
-    time: Date.now()
+    time: Date.now(),
   })
 }
 
