@@ -27,14 +27,11 @@
   },
   "babel": {
     "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "current"
-          }
+      ["env", {
+        "targets": {
+          "node": "current"
         }
-      ]
+      }]
     ]
   }
 }
