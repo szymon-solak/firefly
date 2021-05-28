@@ -23,7 +23,7 @@
     "bunyan": "^1.8.12",
     "lyric-get": "^1.0.3",
     "node-vibrant": "^3.0.0",
-    "ws": "^6.0.0"
+    "ws": "^7.4.5"
   },
   "babel": {
     "presets": [
